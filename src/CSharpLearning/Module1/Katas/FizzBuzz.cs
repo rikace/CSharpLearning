@@ -21,8 +21,34 @@ namespace Module1
     {
         public static void Run()
         {
+            string result;
             // CODE HERE
+            for (int i = 1; i <= 100; i++)
+            {
+                result = null;
+                if(i%3 == 0)
+                {
+                    result = "fizz";
+                }
+                if(i%5 == 0)
+                {
+                    result += "Buzz";
+                }
+                if(result == null)
+                {
+                    result = i.ToString();
+                }
+                Console.WriteLine(result);
+            }
+        }
+
+    };
+    class FizzBuzzMain
+    {
+        public static void Main()
+        {
+
+            FizzBuzz.Run();
         }
     }
 }
-
