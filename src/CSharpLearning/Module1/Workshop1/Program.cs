@@ -14,6 +14,28 @@ namespace Workshop1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Random rnd = new Random();
+
+                int rwnnn = rnd.Next(10);
+                //Console.WriteLine(rnd.Next(10));
+                Console.WriteLine("Random Number is : **");
+            
+            int count = 1;
+            while (count <= 5)
+            {
+                Console.WriteLine("Please guess the Random number for " + count + "Time");
+                int nnn = Convert.ToInt32(Console.ReadLine());
+
+                if (nnn == rwnnn)
+                {
+                    Console.WriteLine(" congrats; You got the correct Number");
+                    break;
+                }
+                else{
+                    count = count+1;
+                     Console.WriteLine("You got the Wrong Number , try again");
+                }
+            }
         }
     }
 }
