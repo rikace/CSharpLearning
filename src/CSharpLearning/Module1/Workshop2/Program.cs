@@ -2,18 +2,35 @@
 
 namespace Workshop2
 {
-    class Program
+    
+    public struct Circle
     {
-        // open the doc Activity 2 inside the Docs Folder
-        // when the code is completed, uncomment the code insire the Main method to run the solution
+        public double Radius { get; }
+        public Circle(double radius)
+        {
+            Radius = radius;
+        }
+        public double Area => Math.PI * Radius * Radius;
+
+        public static Circle operator +(Circle circle1, Circle circle2)
+        {
+            var newArea = circle1.Area + circle2.Area;
+            var newRadius = Math.Sqrt((newArea / Math.PI));
+
+            return new Circle(newRadius);
+        }
+    }
+
+
+    public static class Solution
+    {
         public static void Main()
         {
-            //var circle1 = new Circle(3);
-            //var circle2 = new Circle(3);
-            //var circle3 = circle1 + circle2;
+            var circle1 = new Circle(3);
+            var circle2 = new Circle(3);
+            var circle3 = circle1 + circle2;
 
-            //Console.WriteLine($"Adding circles of radius of {circle1.Radius} and {circle2.Radius} " +
-            //                  $"results in a new circle with a radius {circle3.Radius}");
+            Console.WriteLine($"Adding circles of radius of {circle1.Radius} and {circle2.Radius} " + $"results in a new circle with a radius {circle3.Radius} ");
         }
     }
 }
