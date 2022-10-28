@@ -42,9 +42,16 @@ namespace Workshop1
                 }
                 catch(Exception)
                 {
-                    Console.Write("Please enter correct number in the range of 0-9. ");
-                    Console.WriteLine((Chances - i - 1) + " Chances left");
-                    Console.WriteLine();
+                    if (i == Chances - 1)
+                    {
+                        Console.WriteLine("Sorry, No more chances left.");
+                    }
+                    else
+                    {
+                        Console.Write("Please enter correct number in the range of 0-9. ");
+                        Console.WriteLine((Chances - i - 1) + " Chances left");
+                        Console.WriteLine();
+                    }
                 }
             }
         }
