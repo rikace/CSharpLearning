@@ -1,29 +1,41 @@
-namespace Event_Delegate;
+using System;
 
-public class FuncOfDelegates
+namespace Event_Delegate
 {
-    public static void Run()
+    public class FuncOfDelegates
     {
-        Func<string, bool> validator =
-            word =>
+        static string Name { get; set; }
+
+        public static void Run(string input)
+        {
+            Func<string, bool> validator =
+                word =>
+                {
+                    int count = word.Length;
+                    return count > 3;
+                };
+
+            bool isValid = validator(Name);
+
+
+
+
+            ValidateInput(validator);
+
+            ValidateInput(word =>
             {
                 int count = word.Length;
                 return count > 3;
-            };
-        ValidateInput(validator);
-        ValidateInput(word =>
+            });
+
+            Console.ReadKey();
+        }
+
+        public static void ValidateInput(Func<string, bool> validator)
         {
-            int count = word.Length;
-            return count > 3;
-        });
-
-        Console.ReadKey();
-    }
-
-    public static void ValidateInput(Func<string, bool> validator)
-    {
-        string input = "Hello";
-        bool isValid = validator(input);
-        Console.WriteLine($"Is Valid: {isValid}");
+            string input = "Hello";
+            bool isValid = validator(input);
+            Console.WriteLine($"Is Valid: {isValid}");
+        }
     }
 }

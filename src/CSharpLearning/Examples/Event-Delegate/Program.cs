@@ -1,3 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using EventDelegate;
+using EventDelegate.Events;
 
-Console.WriteLine("Hello, World!");
+namespace MyEventExamples
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Events.Run();
+        }
+    }
+}
+   

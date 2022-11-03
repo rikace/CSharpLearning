@@ -1,3 +1,5 @@
-namespace EventDelegate;
+namespace EventDelegate
+{
 
-public delegate double Add(double num1, double num2);
+    public delegate double Add(double num1, double num2);
+}

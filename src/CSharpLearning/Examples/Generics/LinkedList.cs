@@ -119,6 +119,11 @@ namespace Generic
             llist.Add("Ron");
             //...
 
+
+            var llist2 = new LinkedList<int>();
+            var llist3 = new LinkedList<Customer>();
+
+
             Node<string> name = new Node<string>("May");
         }
     }

@@ -1,5 +1,7 @@
+using System;
 namespace EventDelegate.Events
 {
+
     public delegate void ClickHandler(object sender, ClickEventArgs e);
     
     public class ClickEventArgs : EventArgs
@@ -29,11 +31,18 @@ namespace EventDelegate.Events
             CalculatorButton calcBtn = new CalculatorButton();
 
             calcBtn.Clicked += new ClickHandler(prg.CalculatorBtnClicked);
-            calcBtn.Clicked += prg.CalculatorBtnClicked;
+         
+            calcBtn.Clicked += CalcBtn_Clicked;
 
             calcBtn.SimulateClick();
 
             Console.ReadKey();
+        }
+
+      
+        private static void CalcBtn_Clicked(object sender, ClickEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         public void CalculatorBtnClicked(object sender, ClickEventArgs e)

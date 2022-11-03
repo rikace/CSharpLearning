@@ -1,7 +1,9 @@
-namespace QueryingCollections;
-
-public class Order
+namespace QueryingCollections
 {
-    public int CustomerID { get; set; }
-    public string Description { get; set; }
+
+    public class Order
+    {
+        public int CustomerID { get; set; }
+        public string Description { get; set; }
+    }
 }

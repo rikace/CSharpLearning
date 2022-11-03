@@ -1,3 +1,4 @@
+using System;
 namespace EventDelegate
 {
     public delegate void ClickHandler(object sender, ClickEventArgs e);
@@ -21,14 +22,16 @@ namespace EventDelegate
             }
         }
         
-        public static void Run()
+        public static void Run(int id)
         {
             CalculatorButton calcBtn = new CalculatorButton();
+
+            string someName = "some name";
 
             calcBtn.Clicked += (object sender, ClickEventArgs e) =>
             {
                 Console.WriteLine(
-                    $"Caller is a CalculatorButton: {sender is CalculatorButton} and is named {e.Name}");
+                    $"Caller is a CalculatorButton: {sender is CalculatorButton} and is named {e.Name} and " + someName);
             };
 
             calcBtn.SimulateClick();

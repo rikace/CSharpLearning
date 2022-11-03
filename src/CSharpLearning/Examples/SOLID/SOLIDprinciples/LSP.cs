@@ -1,3 +1,5 @@
+using System;
+
 namespace SOLIDprinciples.LSP
 {
     interface IPaymentTransaction

@@ -1,6 +1,8 @@
-namespace QueryingCollections;
-
-public class CustomerViewModel
+namespace QueryingCollections
 {
-    public string Name { get; set; }
+
+    public class CustomerViewModel
+    {
+        public string Name { get; set; }
+    }
 }

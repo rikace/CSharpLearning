@@ -1,35 +1,55 @@
-namespace EventDelegate;
+using System;
 
-public class ActionLambda
+namespace EventDelegate
 {
-    public static void Run()
+
+    public class ActionLambda
     {
-        Predicate<string> validator =
-            word =>
+        public static void Run()
+        {
+            Predicate<string> validator1 =
+                word =>
+                {
+                    int count = word.Length;
+                    return count > 3;
+                };
+            Predicate<string> validator2 =
+              word =>
+              {
+                  int count = word.Length;
+                  return count % 2 == 0;
+              };
+            ValidateInput(validator1);
+            ValidateInput(validator2);
+
+
+            ValidateInput(word =>
             {
                 int count = word.Length;
                 return count > 3;
-            };
-        ValidateInput(validator);
-        ValidateInput(word =>
+            });
+
+            Console.ReadKey();
+        }
+
+        
+        public static void SimpleActionLambda()
         {
-            int count = word.Length;
-            return count > 3;
-        });
+            Func<int, int, string> func = (a,b) =>
+            {
+                return (a + b).ToString();
+            };
 
-        Console.ReadKey();
-    }
+            func(40, 2);
+        }
 
-    public static void SimpleActionLambda()
-    {
-        Action hello = () => Console.WriteLine("Hello!");
-        hello();
-    }
 
-    public static void ValidateInput(Predicate<string> validator)
-    {
-        string input = "Hello";
-        bool isValid = validator(input);
-        Console.WriteLine($"Is Valid: {isValid}");
+
+        public static void ValidateInput(Predicate<string> validator)
+        {
+            string input = "Hello";
+            bool isValid = validator(input);
+            Console.WriteLine($"Is Valid: {isValid}");
+        }
     }
 }

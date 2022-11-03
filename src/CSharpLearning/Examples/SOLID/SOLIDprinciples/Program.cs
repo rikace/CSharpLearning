@@ -1,4 +1,6 @@
-﻿namespace SOLIDprinciples
+﻿using System;
+
+namespace SOLIDprinciples
 {
     class Program
     {
