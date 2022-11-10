@@ -24,7 +24,7 @@ namespace Workshop1
                     int EnteredNumber = Convert.ToInt32(Console.ReadLine());
                     if (EnteredNumber == RandomNumber)
                     {
-                        Console.WriteLine("Consgratulations. Number matched");
+                        Console.WriteLine("Congratulations. Number matched");
                         break;
                     }
                     else
