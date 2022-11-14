@@ -45,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workshop3", "Exercises\Work
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQExercises", "Exercises\LINQExercises\LINQExercises.csproj", "{BBBD2F55-8FF7-4F6E-A213-BC545A5F8154}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopVary", "WorkshopVary\WorkshopVary.csproj", "{5B17910B-E857-440E-B1D2-5A52FBE5938F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkshopVary", "WorkshopVary\WorkshopVary.csproj", "{5B17910B-E857-440E-B1D2-5A52FBE5938F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopVryDeepTest", "WorkshopVryDeepTest\WorkshopVryDeepTest.csproj", "{7156F94E-577A-45D7-AB98-D4326D61C252}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +127,10 @@ Global
 		{5B17910B-E857-440E-B1D2-5A52FBE5938F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B17910B-E857-440E-B1D2-5A52FBE5938F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B17910B-E857-440E-B1D2-5A52FBE5938F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7156F94E-577A-45D7-AB98-D4326D61C252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7156F94E-577A-45D7-AB98-D4326D61C252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7156F94E-577A-45D7-AB98-D4326D61C252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7156F94E-577A-45D7-AB98-D4326D61C252}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
