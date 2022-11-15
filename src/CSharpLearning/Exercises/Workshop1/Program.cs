@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Workshop1
 {
@@ -11,9 +13,32 @@ namespace Workshop1
         // 5.	If there are no more chances, give a warning message and terminate the program.
 
         // See Docs folder Activity 1
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            var numberToBeGuessed = new Random().Next(0, 10);
+            var remainingChances = 5;
+            var numberFound = false;
+
+            Console.WriteLine("Welcome to C# Workshop Guessing Game.");
+            while (remainingChances > 0 && !numberFound)
+            {
+                Console.WriteLine($"\n You have {remainingChances} chances. Please type a number between 0 and 10 to try to guess the number generated for you.");
+
+                var number = int.Parse(Console.ReadLine());
+                if (number == numberToBeGuessed)
+                {
+                    numberFound = true;
+                }
+                else
+                {
+                    remainingChances--;
+                }
+
+            }
         }
     }
 }
+
+
