@@ -160,7 +160,7 @@ namespace TicTacToe
 
             bool checkBoardFilled = CheckBoardFilled(board);
 
-            if (checkBoardFilled)
+            if (!checkBoardFilled)
 
                 return GameStatus.OnGoing;
 
@@ -199,9 +199,15 @@ namespace TicTacToe
         private bool CheckBoardFilled(char[] board)
 
         {
+            foreach (char c in board)
+            {
+                if (c == '-')
+                {
+                    return false;
+                }
+            }
 
-            return false;
-
+            return true;
         }
 
 
@@ -209,9 +215,23 @@ namespace TicTacToe
         private bool HorizontalCheck(char[] board, Player player1)
 
         {
-            
-            throw new NotImplementedException();
 
+            if (board[0] == board[1] && board[1] == board[2])
+            {
+                return true;
+            }
+            else if (board[3] == board[4] && board[4] == board[5])
+            {
+                return true;
+            }
+            else if (board[6] == board[7] && board[7] == board[8])
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
 
@@ -220,7 +240,18 @@ namespace TicTacToe
 
         {
 
-            throw new NotImplementedException();
+            if (board[0] == board[4] && board[4] == board[8])
+            {
+                return true;
+            }
+            else if (board[2] == board[4] && board[4] == board[6])
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
         }
 
@@ -229,22 +260,23 @@ namespace TicTacToe
         private bool VerticalCheck(char[] board, Player player1)
 
         {
+
             if (board[0] == board[3] && board[3] == board[6])
             {
-                
+                return true;
             }
             else if (board[1] == board[4] && board[4] == board[7])
             {
-
+                return true;
             }
             else if (board[2] == board[5] && board[5] == board[8])
             {
-
+                return true;
             }
-
-
-
-
+            else
+            {
+                return false;
+            }
 
         }
 
@@ -337,7 +369,6 @@ namespace TicTacToe
             string boardVisual = $"| {board[0]} | {board[1]} | {board[2]} |\n| {board[3]} | {board[4]} | {board[5]} |\n| {board[6]} | {board[7]} | {board[8]} |\n";
 
             Console.WriteLine(boardVisual);
-            
 
         }
 
@@ -376,13 +407,9 @@ namespace TicTacToe
             // - Tic Tac Toe 
 
             /*
-
                 x_|_x|_x
-
                 __|_x|_x_
-
                   |  | x       
-
              */
 
         }
