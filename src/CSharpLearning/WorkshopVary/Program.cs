@@ -38,11 +38,11 @@ namespace WorkshopVary
         static void Main(string[] args)
         {
             // - Flight CSV query            
-            string filePath = "./HMT_-_2011_Air_Data.csv";
-            var dataLoader = new FlightsLoader(filePath);
-            RunFlightQuery(dataLoader);
+            //string filePath = "./HMT_-_2011_Air_Data.csv";
+            //var dataLoader = new FlightsLoader(filePath);
+            //RunFlightQuery(dataLoader);
 
-            
+
             // - Tic Tac Toe 
             /*
                 __|__|__
@@ -50,7 +50,11 @@ namespace WorkshopVary
                   |  |        
              */
 
-            // Fizz Buzz review
+            var player1 = new Player("Kavya", 'X');
+            var player2 = new Player("Padma", 'O');
+
+            var game = new TicTacToeGame(player1, player2);
+            game.Play();
 
 
             Console.ReadLine();
