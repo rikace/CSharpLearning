@@ -1,14 +1,12 @@
 ﻿using System;
 
-namespace Module1
+namespace Workshop4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            FizzBuzz.Run();
-
-            Console.ReadLine();
+            Console.WriteLine("Hello World!");
         }
     }
 }
