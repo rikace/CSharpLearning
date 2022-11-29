@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Workshop3
+namespace Workshop5
 {
     class Program
     {

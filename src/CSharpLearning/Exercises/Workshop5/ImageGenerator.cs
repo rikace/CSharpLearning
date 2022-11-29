@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Workshop2
+namespace Workshop5
 {
-   // CODE HERE
+    class ImageGenerator
+    {
+    }
 }
